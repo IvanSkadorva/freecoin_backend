@@ -7,9 +7,9 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get(':amount')
-  getMoney(@Param() params): string {
+  getMoney(@Param() params): Chain {
     owner.sendMoney(params.amount, user.publicKey);
-    return 'hello";
+    return Chain.instance;
   }
 
   @Post(':amount')
